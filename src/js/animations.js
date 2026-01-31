@@ -1,5 +1,3 @@
-import "../style.css";
-
 /**
  * CleanAura - Animation System
  * Using Tailwind classes for animations

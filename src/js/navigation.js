@@ -1,4 +1,3 @@
-import "../style.css";
 /**
  * CleanAura - Navigation System
  * Responsive, accessible navigation with smooth transitions

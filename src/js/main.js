@@ -74,37 +74,58 @@ function initMobileMenu() {
 }
 
 // FAQ Toggle Functionality (UPDATED)
+// FAQ Toggle Functionality - Pure Tailwind Version
 function initFAQToggle() {
-  document.querySelectorAll(".faq-question").forEach((button) => {
+  // Get all FAQ question buttons
+  const faqButtons = document.querySelectorAll(".faq-question");
+
+  // Add click event to each button
+  faqButtons.forEach((button) => {
     button.addEventListener("click", function () {
+      // Get the answer section (next sibling element)
       const answer = this.nextElementSibling;
-      const icon = this.querySelector("i");
-      const isOpening = answer.classList.contains("hidden");
 
-      // Close all other FAQs
-      document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
-        if (otherAnswer !== answer) {
-          otherAnswer.classList.add("hidden");
-          const otherIcon =
-            otherAnswer.previousElementSibling.querySelector("i");
-          if (otherIcon) otherIcon.classList.remove("rotate-180");
-          otherAnswer.previousElementSibling.classList.remove("bg-teal-50");
-        }
-      });
-
-      // Toggle current FAQ
+      // Toggle the 'hidden' class (Tailwind utility)
       answer.classList.toggle("hidden");
-      if (icon) icon.classList.toggle("rotate-180");
-      this.classList.toggle("bg-teal-50");
 
-      // Smooth scroll if opening
+      // Toggle the icon rotation
+      const icon = this.querySelector("i");
+      if (icon) {
+        icon.classList.toggle("rotate-180");
+      }
+
+      // Toggle button background
+      this.classList.toggle("bg-white");
+      this.classList.toggle("bg-gray-50");
+
+      // Optional: Close other FAQs when opening one
+      const isOpening = !answer.classList.contains("hidden");
+
       if (isOpening) {
-        setTimeout(() => {
-          this.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        }, 100);
+        // Close all other FAQs
+        document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
+          if (otherAnswer !== answer) {
+            otherAnswer.classList.add("hidden");
+
+            // Reset other buttons
+            const otherButton = otherAnswer.previousElementSibling;
+            if (otherButton && otherButton.classList.contains("faq-question")) {
+              otherButton.classList.remove("bg-gray-50");
+              otherButton.classList.add("bg-white");
+
+              // Reset other icons
+              const otherIcon = otherButton.querySelector("i");
+              if (otherIcon) {
+                otherIcon.classList.remove("rotate-180");
+              }
+            }
+          }
+        });
       }
     });
   });
+
+  console.log("FAQ toggle initialized successfully");
 }
 
 // Scroll to Top Button
