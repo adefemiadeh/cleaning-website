@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | M&C cleaning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=s
+wap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link href="/src/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-2 group">
+            <div
+              class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300"
+            >
+              <i class="fas fa-sparkles text-white text-lg"></i>
+            </div>
+            <span class="text-2xl font-bold text-gray-900"
+              >M&C<span class="text-teal-600"> Cleaning</span></span
+            >
+          </a>
+
+          <!-- Desktop Navigation (Hidden on mobile) -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-toggle md:hidden w-10 h-10 flex flex-col justify-center items-center space-y-1.5"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div
+          id="mobileMenu"
+          class="md:hidden absolute left-0 right-0 top-full bg-white shadow-xl z-40 -translate-y-full opacity-0 invisible transition-all duration-300"
+        >
+          <div class="flex flex-col p-6 space-y-4 border-t">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <!-- Contact Options Section -->
+    <!-- Service Hours & Response -->
+    <section class="py-20 bg-teal-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+              When You Can Reach Us
+            </h2>
+
+            <!-- Service Hours -->
+            <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+              <h3
+                class="text-xl lg:text-2xl font-bold text-gray-900 mb-4 flex items-center"
+              >
+                <i class="fas fa-clock text-teal-600 mr-3"></i>
+                Service Hours
+              </h3>
+              <div class="space-y-2 lg:text-xl">
+                <div class="flex justify-between">
+                  <span class="font-medium">Monday - Friday</span>
+                  <span>7:00 AM - 8:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Saturday</span>
+                  <span>8:00 AM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Sunday</span>
+                  <span>9:00 AM - 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Response Time Card -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg mt-5">
+            <div class="text-center mb-8">
+              <div
+                class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fas fa-bolt text-teal-600 text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Fast Response Guarantee
+              </h3>
+              <p class="text-gray-600">We'll get back to you within:</p>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="flex items-center p-4 bg-teal-50 rounded-lg lg:text-xl"
+              >
+                <div
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-phone text-teal-600"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900">Phone Calls</p>
+                  <p class="text-gray-600">Within 2 business hours</p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center p-4 bg-teal-50 rounded-lg lg:text-xl"
+              >
+                <div
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-envelope text-teal-600"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900">Email Inquiries</p>
+                  <p class="text-gray-600">Within 24 hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 bg-teal-50 rounded-2xl p-8 max-w-5xl mx-auto">
+      <h3 class="text-5xl text-center font-bold text-gray-900 mb-4">
+        Ready to Get Started?
+      </h3>
+      <p class="text-gray-600 mb-6 text-xl">
+        Call or email us for a free, no-obligation quote. We'll assess your
+        needs and provide a customized cleaning plan.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+15551234567"
+          class="bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
+        >
+          <i class="fas fa-phone mr-2"></i>Call Now
+        </a>
+        <a
+          href="mailto:hello@cleanaura.com"
+          class="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-teal-400 hover:bg-teal-50 transform hover:-translate-y-1 transition-all duration-300 text-center"
+        >
+          <i class="fas fa-envelope mr-2"></i>Send Email
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white mt-5">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto animate-fade-up">
+          <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-6">
+            <div
+              class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="flex justify-between items-center cursor-pointer group"
+              >
+                <h3 class="text-xl font-bold text-gray-900">
+                  How quickly can you start cleaning?
+                </h3>
+                <i
+                  class="fas fa-chevron-down text-teal-600 group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </div>
+              <p id="" class="mt-4 text-gray-600 hidden faq-answer">
+                We can typically schedule your first cleaning within 48-72 hours
+                of your request. For emergency or same-day services, please call
+                us directly at (555) 123-4567.
+              </p>
+            </div>
+
+            <div
+              class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="flex justify-between items-center cursor-pointer group"
+              >
+                <h3 class="text-xl font-bold text-gray-900">
+                  Are your cleaning products safe for children and pets?
+                </h3>
+                <i
+                  class="fas fa-chevron-down text-teal-600 group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </div>
+              <p class="mt-4 text-gray-600 hidden faq-answer">
+                Absolutely. We use only eco-friendly, non-toxic, and
+                biodegradable cleaning products that are safe for children,
+                pets, and those with allergies or sensitivities.
+              </p>
+            </div>
+
+            <div
+              class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="flex justify-between items-center cursor-pointer group"
+              >
+                <h3 class="text-xl font-bold text-gray-900">
+                  Do I need to be home during the cleaning?
+                </h3>
+                <i
+                  class="fas fa-chevron-down text-teal-600 group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </div>
+              <p class="mt-4 text-gray-600 hidden faq-answer">
+                No, many of our clients provide us with access to their homes or
+                offices. All our staff are thoroughly vetted, bonded, and
+                insured for your peace of mind.
+              </p>
+            </div>
+
+            <div
+              class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300"
+            >
+              <div
+                class="flex justify-between items-center cursor-pointer group"
+              >
+                <h3 class="text-xl font-bold text-gray-900">
+                  What's included in your satisfaction guarantee?
+                </h3>
+                <i
+                  class="fas fa-chevron-down text-teal-600 group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </div>
+              <p class="mt-4 text-gray-600 hidden faq-answer">
+                If you're not completely satisfied with any aspect of our
+                service, let us know within 24 hours and we'll return to
+                re-clean the area at no additional cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <a href="index.html" class="flex items-center space-x-2 mb-6">
+              <div
+                class="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-sparkles text-white"></i>
+              </div>
+              <span class="text-2xl font-bold"
+                >M&C<span class="text-teal-400"> cleaning</span></span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Premium cleaning services for homes and businesses. Experience the
+              difference of a truly clean space.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html#residential"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Residential Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#commercial"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Commercial Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#deep"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Deep Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >All Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt text-teal-400 mr-3"></i>
+                123 Clean Street, San Francisco, CA
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-teal-400 mr-3"></i>
+                (555) 123-4567
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-teal-400 mr-3"></i>
+                hello@cleanaura.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-sm"
+        >
+          <p>&copy; 2026 M&C cleaning. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

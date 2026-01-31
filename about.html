@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | M&C cleaning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=s
+wap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link href="/src/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      :root {
+        --primary: #0d9488;
+        --secondary: #f5f5f4;
+        --accent: #1e293b;
+      }
+
+      /* Custom animations not covered by Tailwind */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .animate-float {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-2 group">
+            <div
+              class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300"
+            >
+              <i class="fas fa-sparkles text-white text-lg"></i>
+            </div>
+            <span class="text-2xl font-bold text-gray-900"
+              >M&C<span class="text-teal-600"> Cleaning</span></span
+            >
+          </a>
+
+          <!-- Desktop Navigation (Hidden on mobile) -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-toggle md:hidden w-10 h-10 flex flex-col justify-center items-center space-y-1.5"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div
+          id="mobileMenu"
+          class="md:hidden absolute left-0 right-0 top-full bg-white shadow-xl z-40 -translate-y-full opacity-0 invisible transition-all duration-300"
+        >
+          <div class="flex flex-col p-6 space-y-4 border-t">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-teal-600 transition-colors duration-200 py-3 border-b"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-20 px-6 bg-linear-to-br from-teal-50 to-stone-100">
+      <div class="container mx-auto max-w-6xl">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Our <span class="text-teal-600">Story</span> of Clean
+          </h1>
+          <p class="text-xl text-gray-600">
+            Founded on a simple belief: everyone deserves to live and work in a
+            truly clean, healthy environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto
+=format&fit=crop&w=1000&q=80"
+                alt="Professional cleaning team"
+                class="w-full h-125 object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900">
+              From Passion to Profession
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              M&C cleaning was born due to a noticeable gap in the market for
+              truly premium cleaning services that combined meticulous attention
+              to detail with eco-conscious practices.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              From our first client to every new partnership, we have maintained
+              a singular focus: premium cleaning experiences built on trust and
+              consistency. Our growing family of satisfied customers knows they
+              can rely on our unwavering standards and sustainable approach.
+            </p>
+            <div class="pt-6">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-leaf text-teal-600 text-xl"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900">Eco-Friendly Commitment</p>
+                  <p class="text-gray-600">
+                    Using only biodegradable, non-toxic cleaning products
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Core <span class="text-teal-600">Values</span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            The principles that guide everything we do at M&C cleaning
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-teal-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-award text-teal-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+            <p class="text-gray-600 text-xl">
+              We don't just clean, we perfect. Every surface, every corner,
+              every detail matters to us.
+            </p>
+          </div>
+
+          <div
+            class="bg-teal-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-handshake text-teal-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Trust</h3>
+            <p class="text-gray-600 text-xl">
+              We build relationships based on reliability, transparency, and
+              consistent quality.
+            </p>
+          </div>
+
+          <div
+            class="bg-teal-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-recycle text-teal-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Sustainability
+            </h3>
+            <p class="text-gray-600 text-xl">
+              We care for your space and our planet with eco-friendly products
+              and practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cleaning Philosophy -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center"
+          >
+            Our <span class="text-teal-600">Cleaning Philosophy</span>
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Left Column - Core Beliefs -->
+            <div class="space-y-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center shrink"
+                >
+                  <i class="fas fa-eye text-teal-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Attention to Detail
+                  </h3>
+                  <p class="text-gray-600 text-xl">
+                    We believe cleaning isn't just about surfaces, it's about
+                    the corners, edges, and spaces between that others miss.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center shrink"
+                >
+                  <i class="fas fa-heart text-teal-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Care in Every Action
+                  </h3>
+                  <p class="text-gray-600 text-xl">
+                    We treat every space with the same respect and consideration
+                    we would our own homes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column - Core Beliefs -->
+            <div class="space-y-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center shrink"
+                >
+                  <i class="fas fa-leaf text-teal-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Sustainable Excellence
+                  </h3>
+                  <p class="text-gray-600 text-xl">
+                    Exceptional cleaning shouldn't come at the expense of health
+                    or environment.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center shrink"
+                >
+                  <i class="fas fa-handshake text-teal-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Partnership Approach
+                  </h3>
+                  <p class="text-gray-600 text-xl">
+                    We see every client relationship as a partnership built on
+                    trust and consistent quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Philosophy Statement -->
+          <div class="mt-16 p-8 bg-teal-50 rounded-2xl text-center">
+            <p class="text-2xl text-gray-800 italic mb-6">
+              "We don't just clean spaces, we transform them into healthier,
+              more vibrant environments where life and business thrive."
+            </p>
+            <p class="text-gray-600">— The M&C Cleaning Promise</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <a href="index.html" class="flex items-center space-x-2 mb-6">
+              <div
+                class="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-sparkles text-white"></i>
+              </div>
+              <span class="text-2xl font-bold"
+                >M&C<span class="text-teal-400"> cleaning</span></span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Premium cleaning services for homes and businesses. Experience the
+              difference of a truly clean space.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors duration-200"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html#residential"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Residential Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#commercial"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Commercial Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#deep"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Deep Cleaning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >All Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-200"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt text-teal-400 mr-3"></i>
+                123 Clean Street, San Francisco, CA
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-teal-400 mr-3"></i>
+                (555) 123-4567
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-teal-400 mr-3"></i>
+                hello@M&C cleaning.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-sm"
+        >
+          <p>&copy; 2026 M&C cleaning. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
